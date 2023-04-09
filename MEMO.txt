@@ -13,3 +13,5 @@ https://qiita.com/nagataaaas/items/5c7c9ec4813fea85c40c
 
 はじめての Flask #5 ~JSONを返すWebAPIを書こう~
 https://qiita.com/nagataaaas/items/24e68a9c736aec31948e
+
+aaa
