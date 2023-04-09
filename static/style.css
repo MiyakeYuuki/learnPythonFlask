@@ -1,0 +1,183 @@
+.image {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-tm {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+
+.image-tm img {
+    position: absolute;
+}
+
+.nosp {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.container-m {
+    margin-top: 80px;
+}
+
+/*tabの形状*/
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab li a {
+    display: block;
+    background: #ddd;
+    margin: 0 2px;
+    padding: 10px 20px;
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a {
+    background: #fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+    display: none;
+    /*はじめは非表示*/
+    opacity: 0;
+    /*透過0*/
+    background: #fff;
+    padding: 50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;
+    /*表示*/
+    animation-name: displayAnime;
+    /*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* タブの設定 */
+.title-star {
+    padding: 0 0 0 30px;
+    background-image: url(src/car.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    height: 20pt;
+}
+
+.title-location {
+    padding: 0 0 0 25px;
+    background-image: url(src/balloon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    height: 18pt;
+}
+
+.title-user {
+    padding: 0 0 0 25px;
+    background-image: url(src/user.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    height: 18pt;
+}
+
+/* タイトルの設定 */
+.heading-022 {
+    padding: .5em .7em;
+    border-left: 5px solid #2589d0;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+h2 {
+    position: relative;
+    padding: 0.5em;
+    background: #a6d3c8;
+    color: black;
+}
+
+h2::before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px rgb(149, 158, 155);
+}
+
+/* チェックボックスボタンの設定 */
+.areabtn {
+    margin-top: 30px;
+}
+
+#area .checkbox+.checkbox {
+    margin-top: 20px;
+}
+
+.areabtn .btn {
+    border: solid 1px #999999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.areabtn.checkbox input[type='checkbox'],
+.areabtn.checkbox-inline input[type='checkbox'] {
+    margin-left: 0\9;
+}
+
+.radio,
+.checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.greenarea {
+    background-color: #abd5b2;
+}
+
+.bluearea {
+    background-color: #77b3e6;
+}
+
+.pinkarea {
+    background-color: #f4b7bd;
+}
+
+.yellowarea {
+    background-color: #fef5e6;
+}
+
+/* 水平線の設定 */
+.hr1 {
+    position: relative;
+    height: 3px;
+    border-width: 0;
+    background-color: #00bcd4;
+    background-image: -webkit-linear-gradient(135deg, #FD6585 10%, #0D25B9 100%);
+    background-image: linear-gradient(135deg, #FD6585 10%, #0D25B9 100%);
+}

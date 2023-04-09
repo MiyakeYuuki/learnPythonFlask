@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- あってもなくても動くけど入れといた方がいいメタタグ -->
+    <!-- 文字をutf-8に -->
+    <meta charset="utf-8">
+    <!-- どのデバイスで見ても見え方を一緒にする = レスポンシブデザイン -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- style.cssの呼び出し -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/css/5-4-1.css">
+    <!-- javascriptの読み出し -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</head>
+
+<!-- 本文 -->
+<!-- ホーム画像 -->
+<div class="image"><img src="../static/src/ランプの宿.jpg" class="img-fulied"></div>
+<!-- タブの表示 -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+            role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            <p class="title-location">おすすめスポット</p>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+            role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+            <p class="title-star">能登の巡り方</p>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+            role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+            <p class="title-user">ユーザー情報</p>
+        </button>
+    </li>
+</ul>
+<!-- タブコンテンツの中身 -->
+<center>
+    <div class="tab-content" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <!-- タブ1の中身 -->
+
+            <h2>エリアを選ぶ</h2>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <img src="../static/src/areamap.jpg" class="rounded mx-auto d-block" alt="areamap">
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="areabtn checkbox">
+                                <label class="btn greenarea" for="ck1">
+                                    <input type="checkbox" name="checkbox" value="輪島" id="ck1">
+                                    <img src="../static/src/area_wajima.png" width="107" height="22" alt=""></label>
+                            </div>
+                            <div class="areabtn checkbox">
+                                <label class="btn pinkarea" for="ck2">
+                                    <input type="checkbox" name="checkbox" value="宝逹志水・羽咋・志賀" id="ck2">
+                                    <img src="../static/src/area_hakuisika.png" width="237" height="22" alt=""
+                                        class="img-responsive"></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="areabtn checkbox">
+                                <label class="btn bluearea" for="ck3">
+                                    <input type="checkbox" name="checkbox" value="能登町・珠洲" id="ck3">
+                                    <img src="../static/src/area_notosuzu.png" width="193" height="22" alt=""></label>
+                            </div>
+                            <div class="areabtn checkbox">
+                                <label class="btn yellowarea" for="ck4">
+                                    <input type="checkbox" name="checkbox" value="中能登・七尾・穴水" id="ck4">
+                                    <img src="../static/src/area_nakanoto.png" width="258" height="22" alt=""
+                                        class="img-responsive"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input class="btn btn-primary" type="submit" value="観光地を検索">
+                </div>
+            </form>
+        </div>
+        <p>{{ message }}</p>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <!-- タブ2の中身 -->
+            <h2>モデルルートの紹介</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4"><a href="https://www.notohantou.net/camp/course1.html"><img
+                                src="../static/src/trip1.png" alt=""></a>
+                    </div>
+                    <div class="col-4"><a href="https://www.notohantou.net/camp/course2.html"><img
+                                src="../static/src/trip2.png" alt=""></a>
+                    </div>
+                    <div class="col-4"><a href="https://www.notohantou.net/camp/course3.html"><img
+                                src="../static/src/trip3.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <!-- タブ3の中身 -->
+        </div>
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+            ...
+        </div>
+
+    </div>
+</center><!-- タブコンテンツ終わり -->
+
+<!-- フッターの設定 -->
+<hr class="hr1">
+<footer>
+    <div class="col-sm-4 col-sm-push-8">
+        <div>
+            <h4 class="h4">金沢STEAM研究会</h3>
+                <p class="text-contact">〒000-0000 石川県金沢市角間町<br>
+                    電話：076-000-0000<br>
+                    ファックス：076-000-0001<br>
+                    メール：create.kanazawa@gmail.com</p>
+        </div>
+    </div>
+
+</footer>
+</body>

@@ -1,0 +1,15 @@
+flaskでWebアプリを動かすためのサンプル
+$ pipenv run python app.py
+$ pipenv install [パッケージ名]
+参考：
+Flaskの便利な使い方まとめ
+https://qiita.com/bauer/items/70abcb68d3b00d0d1794
+
+はじめての Flask #3 ~htmlをrenderしてみよう~
+https://qiita.com/nagataaaas/items/4662237cfb7b92f0f839
+
+はじめての Flask #4 ~データベースをSQLAlchemyでいじってみよう~
+https://qiita.com/nagataaaas/items/5c7c9ec4813fea85c40c
+
+はじめての Flask #5 ~JSONを返すWebAPIを書こう~
+https://qiita.com/nagataaaas/items/24e68a9c736aec31948e
